@@ -1,0 +1,55 @@
+name: Gear reference review
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check public gear-stat source and stage changes
+        shell: python
+        run: |
+          import json, pathlib, urllib.request, datetime
+          from urllib.parse import urlparse
+          now = datetime.datetime.now(datetime.timezone.utc).isoformat()
+          output = pathlib.Path('gear-review-artifact'); output.mkdir()
+          manifest = json.loads(pathlib.Path('docs/gear/manifest.json').read_text())
+          uri = urlparse(manifest['BundleUrl'])
+          if uri.scheme != 'https' or uri.netloc != 'kinwan96.github.io' or not uri.path.startswith('/ezlay/gear/r'):
+              raise ValueError('Unexpected reference publisher')
+          current = json.loads(pathlib.Path('docs', uri.path.removeprefix('/ezlay/')).read_text())
+          source = 'https://raw.githubusercontent.com/SkeeveAN/Aion-DPS-Meter/main/Backend/src/data/aion2/item_stats.json'
+          request = urllib.request.Request(source, headers={'User-Agent':'EZlay-Gear-Data-Review/1.0'})
+          with urllib.request.urlopen(request, timeout=30) as response:
+              payload = response.read(1024*1024 + 1)
+          if len(payload) > 1024*1024: raise ValueError('Source exceeds size limit')
+          raw = json.loads(payload)
+          if not isinstance(raw, dict) or not 1 <= len(raw) <= 2000: raise ValueError('Unexpected source schema')
+          stats=[]
+          for key,value in raw.items():
+              name=value['names']['en']
+              if not key.isdigit() or int(key)<=0 or not isinstance(name,str) or not 1<=len(name)<=100:
+                  raise ValueError('Invalid stat definition')
+              stats.append(dict(Id=int(key),Name=name,Divisor=100 if value.get('percent') or value.get('hundredths') else 1,Unit='%' if value.get('percent') else '',Confidence='Inferred' if int(key) in (2,3,4,6) else 'Upstream mapping'))
+          normalize=lambda values:{s['Id']:(s['Name'],s['Divisor'],s['Unit']) for s in values}
+          changed=normalize(stats)!=normalize(current['Stats'])
+          report=dict(CheckedAt=now,Changed=changed,Source=source,CurrentRevision=current['Revision'],Stats=len(stats),Published=False)
+          (output/'source-check.json').write_text(json.dumps(report,indent=2))
+          if changed:
+              current['Stats']=stats; current['Revision']+=1; current['PublishedAt']=now
+              for provenance in current['Sources']:
+                  if provenance['Id']=='upstream-stats': provenance['ObservedAt']=now
+              (output/'candidate-reference.json').write_text(json.dumps(current,ensure_ascii=False,indent=2))
+          (output/'README.txt').write_text('Unsigned review artifact only. Review stat units, mappings, caps and benchmark rules with the maintainer tools. No source change is published automatically; no private signing key is stored in this workflow.')
+      - uses: actions/upload-artifact@v4
+        with:
+          name: gear-source-review
+          path: gear-review-artifact/
+          retention-days: 30

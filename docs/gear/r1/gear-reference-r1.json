@@ -1,0 +1,425 @@
+{
+  "Schema": 1,
+  "Scoring": 1,
+  "Revision": 1,
+  "Region": "Global",
+  "Patch": "Stat metadata baseline; item benchmarks pending",
+  "PublishedAt": "2026-11-17T03:43:49.156432+00:00",
+  "Sources": [
+    {
+      "Id": "upstream-stats",
+      "Name": "Bundled AionDPS gear-stat mappings · October 2026",
+      "Url": "https://github.com/SkeeveAN/Aion-DPS-Meter",
+      "ObservedAt": "2026-10-20T00:00:00+00:00"
+    }
+  ],
+  "Stats": [
+    {
+      "Id": 1,
+      "Name": "Might",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 2,
+      "Name": "Dexterity",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Inferred"
+    },
+    {
+      "Id": 3,
+      "Name": "Intelligence",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Inferred"
+    },
+    {
+      "Id": 4,
+      "Name": "Constitution",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Inferred"
+    },
+    {
+      "Id": 6,
+      "Name": "Willpower",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Inferred"
+    },
+    {
+      "Id": 5,
+      "Name": "Precision",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 282,
+      "Name": "Combat Speed",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 19,
+      "Name": "Attack Bonus",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 38,
+      "Name": "Critical Attack",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 41,
+      "Name": "Critical Damage Defense",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 47,
+      "Name": "Critical Damage Tolerance",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 52,
+      "Name": "Defense Bonus",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 98,
+      "Name": "Back Attack",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 99,
+      "Name": "Back Defense",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 104,
+      "Name": "Accuracy Bonus",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 116,
+      "Name": "Evasion Bonus",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 128,
+      "Name": "Critical Hit",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 133,
+      "Name": "Critical Hit Resist",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 158,
+      "Name": "Status Effect Chance",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 193,
+      "Name": "HP",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 199,
+      "Name": "MP",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 200,
+      "Name": "Natural MP Regen",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 255,
+      "Name": "Block",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 28,
+      "Name": "Damage Boost",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 32,
+      "Name": "Weapon Damage Boost",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 58,
+      "Name": "PvP Attack",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 61,
+      "Name": "PvP Defense",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 70,
+      "Name": "Damage Tolerance",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 74,
+      "Name": "Weapon Damage Tolerance",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 102,
+      "Name": "Back Attack Damage Boost",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 113,
+      "Name": "PvP Accuracy",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 125,
+      "Name": "PvP Evasion",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 132,
+      "Name": "PvP Critical Hit",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 146,
+      "Name": "Multi-hit Chance",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 147,
+      "Name": "Multi-hit Resist",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 159,
+      "Name": "Status Effect Resist",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 194,
+      "Name": "Natural HP Regen",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 205,
+      "Name": "Move Speed",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 235,
+      "Name": "Incoming Heal",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 318,
+      "Name": "Accuracy",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 425,
+      "Name": "Attack increase",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 426,
+      "Name": "Defense increase",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 442,
+      "Name": "Perfect Chance",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 443,
+      "Name": "Double Chance",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 587,
+      "Name": "Front Attack",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 44,
+      "Name": "Critical Damage Boost",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 569,
+      "Name": "PvP Block",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 444,
+      "Name": "Regeneration",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 446,
+      "Name": "Perfect Resist",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 447,
+      "Name": "Double Resist",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 448,
+      "Name": "Regeneration Penetration",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 449,
+      "Name": "Endurance Penetration",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 298,
+      "Name": "Flight Power",
+      "Divisor": 100,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 307,
+      "Name": "Defense",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 312,
+      "Name": "Evasion",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 317,
+      "Name": "Attack",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 445,
+      "Name": "Endurance",
+      "Divisor": 100,
+      "Unit": "%",
+      "Confidence": "Upstream mapping"
+    },
+    {
+      "Id": 588,
+      "Name": "Front Defense",
+      "Divisor": 1,
+      "Unit": "",
+      "Confidence": "Upstream mapping"
+    }
+  ],
+  "Rules": []
+}
