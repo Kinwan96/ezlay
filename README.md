@@ -1,31 +1,34 @@
 # EZlay
 
-**A free Windows companion for AION 2.** Combat insights, interactive maps, pet farming and customizable overlays.
+A free Windows companion for **AION 2**. Inspect equipment rolls, review party damage, and track pets and materials while you play.
 
-[Visit the homepage](https://kinwan96.github.io/ezlay/) · [Downloads & patch notes](https://github.com/Kinwan96/ezlay/releases) · [Report a problem](https://github.com/Kinwan96/ezlay/issues)
+[Download for Windows x64](https://github.com/Kinwan96/ezlay/releases/latest/download/EZlay-win-Setup.exe) · [Explore the app](https://kinwan96.github.io/ezlay/) · [Stable patch notes](https://github.com/Kinwan96/ezlay/releases/latest)
 
-![EZlay desktop interface](docs/assets/home.png)
+![EZlay Overview with character resources, equipment insights, and encounter history](docs/assets/overview.webp)
 
-| Feature | What it helps with |
+## Gear inspector
+
+Select an equipped item on the left to compare its rolls with targets for that item and class. A checked circle marks a stat you already own. An empty circle marks a missing target. When a supported reroll could improve the score, EZlay lines it up with the stat it could replace.
+
+![Gear inspector showing equipped armor and the corresponding ideal targets](docs/assets/gear.webp)
+
+## More tools
+
+| Workspace | What you can do |
 |---|---|
-| Combat meter | Party damage and player skill breakdowns |
-| Map & farming | Search documented pets, materials and cube locations |
-| Pet collection | Family filters, progress and pinned farming targets |
-| Alerts | Cube guidance and configurable field boss reminders |
-| Overlay layouts | Position, size, transparency and separate map locking |
+| Combat | Review party damage and inspect an individual player's skill breakdown. |
+| Atlas and Collection | Filter documented material and pet locations, pin farming targets, and follow collection progress. |
+| Alerts | See nearby cube signals and configure field boss reminders. |
+| Overlays | Customize meter artwork and class colors, position your overlays, and lock the map independently. |
 
-## Downloads
+## Install and update
 
-The first public installer is being prepared and internally tested. Only approved stable patches will be published. There is no public beta update channel.
+Download the stable installer above. EZlay is self-signed, so Windows may show a SmartScreen or publisher warning. Live capture uses [Npcap](https://npcap.com/#download), installed separately. Administrator mode is optional.
 
-EZlay is **free to use and closed source**. This repository contains the website, release information and support resources, not the application source.
+Installed copies can download stable patches in the app. Choose **Restart now** to apply a prepared update, or **Later** to keep playing. Each release lists its validation results and pending manual checks.
 
-## Requirements & support
+## Your data and support
 
-Windows x64. Normal launches request administrator access for game input and menu detection. Combat capture uses Npcap, installed separately from [the official Npcap site](https://npcap.com/#download). Map markers are documented locations, not guaranteed live spawns. Cube arrows are north-up, not camera-relative.
+EZlay keeps settings, saved encounters, character snapshots, and logs in `%LOCALAPPDATA%\EZlayData`. Uninstalling removes the app and keeps this folder for reinstalls. Review screenshots and logs before sharing them in a [bug report](https://github.com/Kinwan96/ezlay/issues).
 
-When reporting a bug, include the app version, expected behavior and reproduction steps. Review screenshots and logs before posting; do not attach character databases, raw captures, credentials or private account information.
-
-## Attribution
-
-EZlay is unofficial and is not affiliated with or endorsed by NCSOFT. AION 2 and game artwork belong to their respective owners. Third-party components retain their licenses; notices will be included with the installer. Current releases are self-signed: Windows may show SmartScreen or Unknown publisher warnings. Never install a root certificate to run EZlay. Live-game, clean-install and installed-upgrade checks remain pending; see each release’s validation notes.
+EZlay is free and closed source. This repository hosts the website, stable downloads, reference data, and support resources. EZlay is an unofficial companion. AION 2 and game artwork belong to NCSOFT. Screenshots use sample data.
